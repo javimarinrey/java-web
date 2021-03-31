@@ -7,4 +7,10 @@ package patterns.comportamiento.command;
  * retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
  */
 public class CommandPattern {
+
+    public static void main(String[] args) {
+        Command command = new EncenderServer(new ArgentinaServer());
+        Invoker serverAdmin = new Invoker(command);
+        serverAdmin.run();
+    }
 }
