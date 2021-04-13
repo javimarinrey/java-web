@@ -11,15 +11,18 @@ public class Main {
 
     public static void main(String[] args) throws ParseException {
 
-        int yearBefore = 2020;
+        /*int yearBefore = 2020;
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date date = sdf.parse("01/01/2022 23:59:59");
         Calendar calendarSearch = Calendar.getInstance();
         calendarSearch.setTime(date);
 
-        System.out.println("daysBetween = " + getNumDaysBetweenYears(calendarSearch, yearBefore));
+        System.out.println("daysBetween = " + getNumDaysBetweenYears(calendarSearch, yearBefore));*/
 
+
+        String s = "1;2; ; ; ; ; ; ; ;";
+        System.out.println(s.split(";").length);
 
 
     }
