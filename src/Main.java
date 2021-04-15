@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.UUID;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 
@@ -21,8 +22,9 @@ public class Main {
         System.out.println("daysBetween = " + getNumDaysBetweenYears(calendarSearch, yearBefore));*/
 
 
-        String s = "1;2; ; ; ; ; ; ; ;";
-        System.out.println(s.split(";").length);
+        //System.err.println(UUID.randomUUID().toString());
+        String s = "";
+        System.out.println(Double.parseDouble("ja"));
 
 
     }
