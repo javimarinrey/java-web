@@ -1,6 +1,6 @@
 package servlets;
 
-import db.PoolConexiones;
+import db.ConnectionPool;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ public class Servlet extends HttpServlet {
      */
     public void init() {
         System.out.println("init");
-        dataSource = new PoolConexiones().dataSource;
+        dataSource = new ConnectionPool().dataSource;
     }
 
     /**

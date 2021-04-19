@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        PoolConexiones pool = new PoolConexiones();
+        ConnectionPool pool = new ConnectionPool();
         Connection con = null;
         try {
             con = pool.dataSource.getConnection();
