@@ -22,9 +22,9 @@ public class Main {
         System.out.println("daysBetween = " + getNumDaysBetweenYears(calendarSearch, yearBefore));*/
 
 
-        //System.err.println(UUID.randomUUID().toString());
-        String s = "";
-        System.out.println(Double.parseDouble("ja"));
+        String d = "    0.84662";
+        System.out.println(Double.parseDouble(d));
+        System.out.println(new Double((d).replaceAll("\\s", "")));
 
 
     }

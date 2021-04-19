@@ -1,17 +1,25 @@
 package servlets;
 
+import db.PoolConexiones;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 
 public class Servlet extends HttpServlet {
+
+    public static DataSource dataSource;
 
     /**
      * El método init se llama solo una vez, cuando se llama por primera vez el servlet
      */
     public void init() {
         System.out.println("init");
+        dataSource = new PoolConexiones().dataSource;
     }
 
     /**
@@ -43,6 +51,23 @@ public class Servlet extends HttpServlet {
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
         System.out.println("doPost");
+        Connection conn = null;
+
+        try {
+            // Obtener connexion
+            conn = dataSource.getConnection();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     /**
