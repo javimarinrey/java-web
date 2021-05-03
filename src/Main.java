@@ -1,3 +1,5 @@
+import utils.UtilsDate;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -22,9 +24,11 @@ public class Main {
         System.out.println("daysBetween = " + getNumDaysBetweenYears(calendarSearch, yearBefore));*/
 
 
-        String d = "    0.84662";
+        /*String d = "    0.84662";
         System.out.println(Double.parseDouble(d));
-        System.out.println(new Double((d).replaceAll("\\s", "")));
+        System.out.println(new Double((d).replaceAll("\\s", "")));*/
+
+        //System.out.println(UtilsDate.formatTime(397 * 1000));
 
 
     }
